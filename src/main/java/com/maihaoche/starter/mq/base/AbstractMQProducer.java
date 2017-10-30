@@ -1,23 +1,24 @@
 package com.maihaoche.starter.mq.base;
 
-import com.google.gson.Gson;
-import com.maihaoche.starter.mq.MQException;
-import com.maihaoche.starter.mq.annotation.MQKey;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang3.StringUtils;
-import org.apache.rocketmq.client.producer.DefaultMQProducer;
-import org.apache.rocketmq.client.producer.MessageQueueSelector;
-import org.apache.rocketmq.client.producer.SendCallback;
-import org.apache.rocketmq.client.producer.SendResult;
-import org.apache.rocketmq.client.producer.selector.SelectMessageQueueByHash;
-import org.apache.rocketmq.common.message.Message;
-
-import javax.annotation.PreDestroy;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
 import java.nio.charset.Charset;
+
+import lombok.Getter;
+import lombok.Setter;
+import lombok.extern.slf4j.Slf4j;
+
+import org.apache.commons.lang.StringUtils;
+
+import com.alibaba.rocketmq.client.producer.DefaultMQProducer;
+import com.alibaba.rocketmq.client.producer.MessageQueueSelector;
+import com.alibaba.rocketmq.client.producer.SendCallback;
+import com.alibaba.rocketmq.client.producer.SendResult;
+import com.alibaba.rocketmq.client.producer.selector.SelectMessageQueueByHash;
+import com.alibaba.rocketmq.common.message.Message;
+import com.google.gson.Gson;
+import com.maihaoche.starter.mq.MQException;
+import com.maihaoche.starter.mq.annotation.MQKey;
 
 /**
  * Created by yipin on 2017/6/27.

@@ -1,16 +1,19 @@
 package com.maihaoche.starter.mq.config;
 
-import com.maihaoche.starter.mq.annotation.MQProducer;
-import com.maihaoche.starter.mq.base.AbstractMQProducer;
-import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang3.StringUtils;
-import org.apache.rocketmq.client.producer.DefaultMQProducer;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.context.annotation.Configuration;
+import java.util.Map;
 
 import javax.annotation.PostConstruct;
-import java.util.Map;
+
+import lombok.extern.slf4j.Slf4j;
+
+import org.apache.commons.lang.StringUtils;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.util.CollectionUtils;
+
+import com.alibaba.rocketmq.client.producer.DefaultMQProducer;
+import com.maihaoche.starter.mq.annotation.MQProducer;
+import com.maihaoche.starter.mq.base.AbstractMQProducer;
 
 /**
  * Created by yipin on 2017/6/29.

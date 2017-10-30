@@ -1,12 +1,15 @@
 package com.maihaoche.starter.mq.base;
 
-import com.google.gson.Gson;
-import com.google.gson.JsonSyntaxException;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
+
 import lombok.extern.slf4j.Slf4j;
-import org.apache.rocketmq.common.message.MessageExt;
+
 import org.springframework.util.Assert;
+
+import com.alibaba.rocketmq.common.message.MessageExt;
+import com.google.gson.Gson;
+import com.google.gson.JsonSyntaxException;
 
 /**
  * Comments：RocketMQ消费抽象基类
